@@ -1,0 +1,41 @@
+<!-- <h1>HI</h1> -->
+<div *ngIf="undefined === myTimeline && !tweetsError">
+  <div class="lds-ripple loader">
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<div *ngIf="undefined !== myTimeline">
+  <div *ngFor="let tweet of myTimeline">
+    <div class="card mb-3 pt-2">
+      <div class="row no-gutters">
+        <div class="col-md-2">
+          <img
+            src="{{ tweet?.user.profile_image_url }}"
+            class="card-img"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-10">
+          <div class="card-body">
+            <h5 class="card-title text-dark d-flex justify-content-start">
+              {{ tweet?.user.name }}
+              <span
+                class="text-muted ml-4"
+                style="font-size:14px;margin-top:5px"
+              >
+                @{{ tweet?.user.screen_name }}
+              </span>
+            </h5>
+            <p class="card-text ">
+              {{ tweet?.full_text }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="tweetsError">
+  <h1 class="text-muted my-4">Please try again after sometime</h1>
+</div>

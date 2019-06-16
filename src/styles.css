@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #f5f5f5;
+}
+div.tab-content {
+  height: 100%;
+}
+.ngb-tab-1.nav-link {
+  border: 0;
+}
+.ngb-tab-1.nav-link.active {
+  border-bottom: 4px;
+  border-color: #1da1f2;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: sans-serif, "PTSansRegular";
+  font-size: 14px;
+  color: #666666;
+  font-weight: 600;
+}
+
+.left,
+.left-side,
+.pull-left {
+  float: left;
+}
+.right,
+.right-side,
+.pull-right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+a img {
+  border: 0px;
+}
+a {
+  text-decoration: none;
+  color: #0d6bb2;
+}
+a:hover {
+  color: #b9baba;
+}
+
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+.vertical-align {
+  vertical-align: top;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+li {
+  list-style-type: none;
+}
+.underline {
+  text-decoration: underline;
+}
+img {
+  max-width: 100%;
+}

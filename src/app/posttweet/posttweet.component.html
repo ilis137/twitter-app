@@ -1,0 +1,51 @@
+<div class="card">
+  <div class="card-header">
+    Post A Tweet
+  </div>
+  <div class="card-body">
+    <form #tweetForm="ngForm" (ngSubmit)="onSubmit(); tweetForm.reset()">
+      <div
+        *ngIf="tweettext.invalid && (tweettext.dirty || tweettext.touched)"
+        class="alert alert-danger"
+      >
+        <div *ngIf="tweettext.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="tweettext.errors.minlength">
+          Name must be at least 8 characters long.
+        </div>
+      </div>
+      <div *ngIf="limitReached" class="alert alert-danger">
+        You have reached the limit
+      </div>
+      <div *ngIf="submitted" class="alert alert-success">
+        Tweet Successfully Submitted!
+      </div>
+      <div class="form-group">
+        <textarea
+          required
+          placeholder="Status"
+          id="Tweet"
+          class="form-control"
+          minlength="8"
+          name="tweetText"
+          [(ngModel)]="tweetText"
+          #tweettext="ngModel"
+        ></textarea>
+      </div>
+
+      <br />
+      <div class="form-group">
+        <button [disabled]="!tweetForm.form.valid" class="btn btn-primary">
+          TWEET
+        </button>
+        <!-- <div *ngIf="undefined === tweetText">
+          <div class="lds-ripple loader">
+            <div></div>
+            <div></div>
+          </div>
+        </div> -->
+      </div>
+    </form>
+  </div>
+</div>

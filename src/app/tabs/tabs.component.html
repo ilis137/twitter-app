@@ -1,0 +1,33 @@
+<div class="hero-background">
+  <div *ngIf="details" class="detail-info">
+    <div class="card profile-image-card">
+      <img src="{{ details?.profile_image_url }}" />
+    </div>
+    <h3 class="text-white">{{ details?.name }}</h3>
+  </div>
+</div>
+
+<ngb-tabset (tabChange)="activeTab = $event.nextId" [justify]="currentJustify" [destroyOnHide]="false">
+  <ngb-tab id="feed" title="Feed">
+    <ng-template ngbTabContent>
+      <app-twitter-timeline
+        [timeline]="myTimeline"
+        [tweetsError]="tweetsError"
+      ></app-twitter-timeline>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab id="followers" title="Followers">
+    <!-- <ng-template ngbTabTitle><b>Fancy</b> title</ng-template> -->
+    <ng-template ngbTabContent>
+      <app-followers
+        [followers]="followers"
+        [followerError]="followerError"
+      ></app-followers>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab id="post" title="Post Tweet">
+    <ng-template ngbTabContent>
+      <app-post-tweet></app-post-tweet>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>

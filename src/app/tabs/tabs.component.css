@@ -1,0 +1,50 @@
+.hero-background {
+  min-height: 100px;
+  height: 200px;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(29, 161, 242, 1) 40%,
+    rgba(89, 212, 237, 1) 79%
+  );
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.profile-image-card {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 2px;
+  /* position: relative;
+  top: 90px;
+  margin-left: 20px; */
+}
+.profile-image-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.hero-background h3 {
+  /* color: #616161; */
+  align-self: center;
+  margin-left: 10px;
+  /* position: relative;
+  top: 50px;
+  right: 70px; */
+}
+.detail-info {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 600px) {
+  .hero-background {
+    justify-content: center;
+  }
+  .detail-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
