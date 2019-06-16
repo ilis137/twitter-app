@@ -37,7 +37,7 @@ to start server and then :
 
 ```
 cd..
-cd client
+
 npm i
 ng serve --open
 ```
