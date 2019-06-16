@@ -1,4 +1,4 @@
-# Twitter Browser
+# Twitter App
 
 ## Problem statement
 
